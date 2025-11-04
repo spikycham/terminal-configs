@@ -3,9 +3,11 @@ local vim = vim.o
 vim.number = true
 vim.relativenumber = true
 
-vim.tabstop = 2
-vim.shiftwidth = 2
+vim.tabstop = 4
+vim.shiftwidth = 4
 vim.expandtab = true
+vim.autoindent = true
+vim.smartindent = true
 
 vim.ignorecase = true
 vim.smartcase = true

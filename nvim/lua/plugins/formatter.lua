@@ -3,30 +3,35 @@ return {
   config = function()
     local formatter = require("formatter")
 
+    local prettier = function()
+      return {
+        exe = "prettier",
+        args = { "--stdin-filepath", vim.api.nvim_buf_get_name(0), "--tab-width", "4", "--use-tabs", "false" },
+        stdin = true,
+      }
+    end
+
     formatter.setup({
       filetype = {
         javascript = {
-          require("formatter.filetypes.javascript").prettier
+          prettier
         },
         javascriptreact = {
-          require("formatter.filetypes.javascriptreact").prettier
+          prettier
         },
         typescript = {
-          require("formatter.filetypes.typescript").prettier
+          prettier
         },
         typescriptreact = {
-          require("formatter.filetypes.typescriptreact").prettier
+          prettier
         },
         html = {
-          require("formatter.filetypes.html").prettier
+          prettier
         },
         css = {
-          require("formatter.filetypes.css").prettier
+          prettier
         },
         -- not for work
-        go = {
-          require("formatter.filetypes.go").gofumpt
-        },
         rust = {
           function ()
             return {
@@ -48,7 +53,6 @@ return {
         "*.html",
         "*.css",
         -- not for work
-        "*.go",
         "*.rs"
       },
       command = "FormatWrite"
