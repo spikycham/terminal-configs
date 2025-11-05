@@ -5,10 +5,11 @@ return {
     require("lualine").setup({
       options = {
         -- theme = "OceanicNext"
-        theme = "onedark",
-        component_separators = { left = '|', right = '|'},
-        section_separators = { left = '', right = ''},
+        -- theme = "onedark",
+        theme = "gruvbox",
+        component_separators = { left = "|", right = "|" },
+        section_separators = { left = "", right = "" },
       },
     })
-  end
+  end,
 }

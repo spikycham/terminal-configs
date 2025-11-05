@@ -1,12 +1,13 @@
 return {
-  -- mini
+  -- nvim tree icons
   {
-    "nvim-mini/mini.nvim",
-    version = false,
+    "nvim-tree/nvim-web-devicons",
     lazy = true,
+
     config = function()
-      require("mini.icons").setup({})
-      require("mini.icons").mock_nvim_web_devicons()
+      require("nvim-web-devicons").setup({
+        default = true,
+      })
     end,
   },
 
@@ -14,8 +15,7 @@ return {
   {
     "nvim-tree/nvim-tree.lua",
     dependencies = {
-      -- "nvim-tree/nvim-web-devicons",
-      "nvim-mini/mini.nvim",
+      "nvim-tree/nvim-web-devicons",
       "christoomey/vim-tmux-navigator",
     },
     cmd = { "NvimTreeToggle", "NvimTreeFocus" },
@@ -31,10 +31,7 @@ return {
   {
     "akinsho/bufferline.nvim",
     version = "*",
-    dependencies = {
-      "nvim-tree/nvim-web-devicons",
-      "nvim-mini/mini.nvim",
-    },
+    dependencies = { "nvim-tree/nvim-web-devicons" },
     event = "BufAdd",
     config = function()
       require("bufferline").setup({

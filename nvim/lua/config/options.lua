@@ -6,8 +6,6 @@ vim.relativenumber = true
 vim.tabstop = 4
 vim.shiftwidth = 4
 vim.expandtab = true
-vim.autoindent = true
-vim.smartindent = true
 
 vim.ignorecase = true
 vim.smartcase = true
@@ -21,5 +19,5 @@ vim.clipboard = "unnamedplus"
 vim.termguicolors = true
 
 vim.cursorline = true
-vim.laststatus = 0
+vim.laststatus = 3
 

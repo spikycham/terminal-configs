@@ -2,7 +2,7 @@ return {
   -- lsp
   {
     "mason-org/mason.nvim",
-    opts = {}
+    opts = {},
   },
   -- {
   --   "github/copilot.vim",
@@ -25,9 +25,9 @@ return {
     opts = {
       automatic_enable = false,
       ensure_installed = {
-        "lua_ls"
-      }
-    }
+        "lua_ls",
+      },
+    },
   },
   {
     "neovim/nvim-lspconfig",
@@ -35,8 +35,8 @@ return {
       local capabilities = vim.lsp.protocol.make_client_capabilities()
       capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-      local on_attach = function (_, bufnr)
-        local opts = {buffer = bufnr, desc = "Lspsaga Hover"}
+      local on_attach = function(_, bufnr)
+        local opts = { buffer = bufnr, desc = "Lspsaga Hover" }
         vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
       end
       vim.lsp.enable("lua_ls")
@@ -48,7 +48,7 @@ return {
       vim.lsp.enable("css_variables")
       vim.lsp.enable("tailwindcss")
       vim.lsp.enable("rust_analyzer")
-    end
+    end,
   },
 
   -- cmp
@@ -56,6 +56,7 @@ return {
   "hrsh7th/cmp-buffer",
   "hrsh7th/cmp-path",
   "hrsh7th/cmp-cmdline",
+  -- cmp icon
   {
     "hrsh7th/nvim-cmp",
     dependencies = {
@@ -70,32 +71,31 @@ return {
       local luasnip = require("luasnip")
       require("luasnip.loaders.from_vscode").lazy_load()
       require("luasnip.loaders.from_lua").lazy_load({
-        paths = "../snippets"
+        paths = "../snippets",
       })
 
       require("nvim-highlight-colors").setup({})
 
       local check_backspace = function()
-        local col = vim.fn.col "." - 1
-        return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
+        local col = vim.fn.col(".") - 1
+        return col == 0 or vim.fn.getline("."):sub(col, col):match("%s")
       end
       cmp.setup({
         snippet = {
           expand = function(args)
-            require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+            require("luasnip").lsp_expand(args.body) -- For `luasnip` users.
           end,
         },
-        window = {
-        },
+        window = {},
         formatting = {
-          format = require("nvim-highlight-colors").format
+          format = require("nvim-highlight-colors").format,
         },
         mapping = cmp.mapping.preset.insert({
-          ['<c-b>'] = cmp.mapping.scroll_docs(-4),
-          ['<c-f>'] = cmp.mapping.scroll_docs(4),
+          ["<c-b>"] = cmp.mapping.scroll_docs(-4),
+          ["<c-f>"] = cmp.mapping.scroll_docs(4),
           -- ['<c-e>'] = cmp.mapping.abort(),
-          ['<Esc>'] = cmp.mapping.abort(),
-          ['<cr>'] = cmp.mapping.confirm({ select = true }),
+          ["<c-e>"] = cmp.mapping.abort(),
+          ["<cr>"] = cmp.mapping.confirm({ select = true }),
           ["<tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
               cmp.select_next_item()
@@ -128,44 +128,42 @@ return {
         }),
 
         sources = cmp.config.sources({
-          { name = 'nvim_lsp' },
-          { name = 'luasnip' }, -- for luasnip users.
-          { name = 'path' },
+          { name = "nvim_lsp" },
+          { name = "luasnip" }, -- for luasnip users.
+          { name = "path" },
         }, {
-          { name = 'buffer' },
+          { name = "buffer" },
         }),
-sorting = {
-  priority_weight = 2,
-  comparators = {
-    function(entry1, entry2)
-      -- only boost "log" snippet to top
-      local is_log_snippet = function(entry)
-        return entry.completion_item.label == "log"
-          and entry.source.name == "luasnip"
-      end
+        sorting = {
+          priority_weight = 2,
+          comparators = {
+            function(entry1, entry2)
+              -- only boost "log" snippet to top
+              local is_log_snippet = function(entry)
+                return entry.completion_item.label == "log" and entry.source.name == "luasnip"
+              end
 
-      if is_log_snippet(entry1) and not is_log_snippet(entry2) then
-        return true
-      elseif not is_log_snippet(entry1) and is_log_snippet(entry2) then
-        return false
-      end
+              if is_log_snippet(entry1) and not is_log_snippet(entry2) then
+                return true
+              elseif not is_log_snippet(entry1) and is_log_snippet(entry2) then
+                return false
+              end
 
-      return nil
-    end,
+              return nil
+            end,
 
-    -- default comparators
-    require("cmp.config.compare").offset,
-    require("cmp.config.compare").exact,
-    require("cmp.config.compare").score,
-    require("cmp.config.compare").recently_used,
-    require("cmp.config.compare").kind,
-    require("cmp.config.compare").sort_text,
-    require("cmp.config.compare").length,
-    require("cmp.config.compare").order,
-  }
-}
-
+            -- default comparators
+            require("cmp.config.compare").offset,
+            require("cmp.config.compare").exact,
+            require("cmp.config.compare").score,
+            require("cmp.config.compare").recently_used,
+            require("cmp.config.compare").kind,
+            require("cmp.config.compare").sort_text,
+            require("cmp.config.compare").length,
+            require("cmp.config.compare").order,
+          },
+        },
       })
-    end
-  }
+    end,
+  },
 }

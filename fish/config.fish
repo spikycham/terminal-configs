@@ -1,6 +1,6 @@
 if status is-interactive
   set -g fish_greeting ""
-  set -gx LSCOLORS f
+  set -gx LSCOLORS "fxfxcxdxbxegedabagacad"
 
 # Homebrew
 set -gx PATH /opt/homebrew/bin $PATH

@@ -6,7 +6,17 @@ return {
     local prettier = function()
       return {
         exe = "prettier",
-        args = { "--stdin-filepath", vim.api.nvim_buf_get_name(0), "--tab-width", "4", "--use-tabs", "false" },
+        args = {
+          "--stdin-filepath",
+          vim.api.nvim_buf_get_name(0),
+          "--tab-width",
+          -- Modify here to change the indent width
+          "4",
+          "--use-tabs",
+          "false",
+          "--bracket-same-line",
+          "true",
+        },
         stdin = true,
       }
     end
@@ -14,34 +24,55 @@ return {
     formatter.setup({
       filetype = {
         javascript = {
-          prettier
+          prettier,
         },
         javascriptreact = {
-          prettier
+          prettier,
         },
         typescript = {
-          prettier
+          prettier,
         },
         typescriptreact = {
-          prettier
+          prettier,
         },
         html = {
-          prettier
+          prettier,
         },
         css = {
-          prettier
+          prettier,
+        },
+        json = {
+          prettier,
         },
         -- not for work
         rust = {
-          function ()
+          function()
             return {
               exe = "rustfmt",
               args = { "--emit=stdout" },
               stdin = true,
             }
-          end
-        }
-      }
+          end,
+        },
+        lua = {
+          function()
+            return {
+              exe = "stylua",
+              args = {
+                "--search-parent-directories",
+                "--stdin-filepath",
+                vim.api.nvim_buf_get_name(0),
+                "-",
+                "--indent-width",
+                "2",
+                "--indent-type",
+                "Spaces",
+              },
+              stdin = true,
+            }
+          end,
+        },
+      },
     })
 
     vim.api.nvim_create_autocmd("BufWritePost", {
@@ -52,10 +83,12 @@ return {
         "*.jsx",
         "*.html",
         "*.css",
+        "*.json",
         -- not for work
-        "*.rs"
+        "*.rs",
+        "*.lua",
       },
-      command = "FormatWrite"
+      command = "FormatWrite",
     })
-  end
+  end,
 }
