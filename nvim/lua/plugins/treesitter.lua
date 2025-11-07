@@ -4,11 +4,9 @@ return {
   event = { "BufReadPost", "BufNewFile" },
   config = function()
     require("nvim-treesitter.configs").setup({
-      require("nvim-ts-autotag").setup({
-        opts = {},
-      }),
+      require("nvim-ts-autotag").setup(),
       ensure_installed = {
-        "c",
+        -- "c",
         "html",
         "css",
         "javascript",
@@ -17,8 +15,8 @@ return {
         "json",
         "markdown",
         "markdown_inline",
-        "go",
         "lua",
+        "rust",
       },
       hightlight = {
         enable = true,
@@ -27,5 +25,5 @@ return {
         enable = false,
       },
     })
-  end
+  end,
 }
