@@ -31,7 +31,7 @@ function git_status_prompt
         if not git diff --cached --quiet 2>/dev/null
             set dirty "$dirty+"
         end
-        echo " ($branch$dirty)"
+        echo "($branch$dirty)"
     end
 end
 
@@ -40,28 +40,31 @@ function fish_prompt
     set my_user "cham"
     set my_host "Mac"
 
-    if status is-interactive
-      set full_path (pwd)
-      set home_dir $HOME
-      set rel_path (string replace -r "^$home_dir" "" $full_path)
-
-      # 如果是家目录本身，显示为自定义符号 ~ 或 :
-      if test "$rel_path" = ""
-          set rel_path "~"  # 或者 ":"
-      end
-
-      # 显示用户名@主机名 当前路径
-      # set_color green
-      # echo -n $my_user
-      set_color normal
-      # echo -n "@"$my_host":"
-      echo -n $rel_path
-
-      set_color green
-      echo -n (git_status_prompt)
+    # 完整路径配置
+    # echo -n "@"$my_host" "
+    # set full_path (pwd)
+    # set home_dir $HOME
+    # set rel_path (string replace -r "^$home_dir" "" $full_path)
+    # if test "$rel_path" = ""
+    #     set rel_path "~"
+    # end
+    # echo -n "@"$my_host":"
+    # echo -n "\$ "
+    # 当前路径配置
+    set full_path (pwd)
+    if test $full_path = $HOME
+        set rel_path "/ "
     else
-      # Do nothing
+        set rel_path (basename $full_path)" "
     end
+
+    echo -n $my_user
+    set_color normal
+    echo -n "@"
+    echo -n $rel_path
+
+    set_color green
+    echo -n (git_status_prompt)
 
     set_color normal
     echo -n "\$ "
@@ -69,12 +72,4 @@ end
 
 # 自动采取灰色提示
 bind \t accept-autosuggestion
-
-else
-
-  function fish_prompt
-      set_color normal
-      echo -n "\$ "
-  end
-
 end
