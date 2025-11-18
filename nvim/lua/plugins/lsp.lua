@@ -73,6 +73,23 @@ return {
       require("luasnip.loaders.from_lua").lazy_load({
         paths = "../snippets",
       })
+      local s = luasnip.snippet
+      local t = luasnip.text_node
+      -- local i = luasnip.insert_node
+      local f = luasnip.function_node
+      luasnip.add_snippets("typescriptreact", {
+        s("tsr", {
+          t("export default function "),
+          f(function()
+            return vim.fn.expand("%:t:r")
+          end, {}), -- 动态获取文件名
+          t({ "() {", "  return <div>" }),
+          f(function()
+            return vim.fn.expand("%:t:r")
+          end, {}), -- 文件名再次填充
+          t({ "</div>", "}" }),
+        }),
+      })
 
       require("nvim-highlight-colors").setup({})
 
