@@ -3,8 +3,8 @@ local vim = vim.o
 vim.number = true
 vim.relativenumber = true
 
-vim.tabstop = 4
-vim.shiftwidth = 4
+vim.tabstop = 2
+vim.shiftwidth = 2
 vim.expandtab = true
 
 vim.ignorecase = true
@@ -20,4 +20,3 @@ vim.termguicolors = true
 
 vim.cursorline = true
 vim.laststatus = 3
-

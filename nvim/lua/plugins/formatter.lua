@@ -11,7 +11,7 @@ return {
           vim.api.nvim_buf_get_name(0),
           "--tab-width",
           -- Modify here to change the indent width
-          "4",
+          "2",
           "--use-tabs",
           "false",
           "--bracket-same-line",
@@ -23,27 +23,14 @@ return {
 
     formatter.setup({
       filetype = {
-        javascript = {
-          prettier,
-        },
-        javascriptreact = {
-          prettier,
-        },
-        typescript = {
-          prettier,
-        },
-        typescriptreact = {
-          prettier,
-        },
-        html = {
-          prettier,
-        },
-        css = {
-          prettier,
-        },
-        json = {
-          prettier,
-        },
+        javascript = { prettier },
+        javascriptreact = { prettier },
+        typescript = { prettier },
+        typescriptreact = { prettier },
+        vue = { prettier },
+        html = { prettier },
+        css = { prettier },
+        json = { prettier },
         -- not for work
         rust = {
           function()

@@ -1,6 +1,7 @@
 return {
   -- lsp
   {
+
     "mason-org/mason.nvim",
     opts = {},
   },
@@ -35,10 +36,10 @@ return {
       local capabilities = vim.lsp.protocol.make_client_capabilities()
       capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-      local on_attach = function(_, bufnr)
-        local opts = { buffer = bufnr, desc = "Lspsaga Hover" }
-        vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
-      end
+      -- local on_attach = function(_, bufnr)
+      --   local opts = { buffer = bufnr, desc = "Lspsaga Hover" }
+      --   vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
+      -- end
       vim.lsp.enable("lua_ls")
       vim.lsp.enable("jsonls")
       vim.lsp.enable("ts_ls")
