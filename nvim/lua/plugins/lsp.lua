@@ -97,6 +97,7 @@ return {
       local t = luasnip.text_node
       -- local i = luasnip.insert_node
       local f = luasnip.function_node
+      -- react function component template
       luasnip.add_snippets("typescriptreact", {
         s("tsr", {
           t("export default function "),
@@ -108,6 +109,16 @@ return {
             return vim.fn.expand("%:t:r")
           end, {}), -- 文件名再次填充
           t({ "</div>", "}" }),
+        }),
+      })
+      -- vue setup template
+      luasnip.add_snippets("vue", {
+        s("tsr", {
+          t({ '<script lang="ts" setup></script>', "", "<template>", "  <div>" }),
+          f(function()
+            return vim.fn.expand("%:t:r")
+          end, {}), -- 动态获取文件名
+          t({ "</div>", "</template>", "<style scoped></style>" }),
         }),
       })
 
