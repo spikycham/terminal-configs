@@ -38,34 +38,35 @@ return {
 
       vim.lsp.enable("lua_ls")
       vim.lsp.enable("jsonls")
-      -- vue
-      local vue_language_server_path = vim.fn.expand("$MASON/packages")
-        .. "/vue-language-server"
-        .. "/node_modules/@vue/language-server"
-      vim.lsp.config("vue_ls", {
-        cmd = { vue_language_server_path, "--stdio" },
-        filetypes = { "vue" },
-        init_options = { vue = { hybridMode = true } },
+      local vue_language_server_path = vim.fn.stdpath("data")
+        .. "/mason/packages/vue-language-server/node_modules/@vue/language-server"
+      local vue_plugin = {
+        name = "@vue/typescript-plugin",
+        location = vue_language_server_path,
+        languages = { "vue" },
+        configNamespace = "typescript",
+      }
+      vim.lsp.config("ts_ls", {
+        init_options = {
+          plugins = {
+            vue_plugin,
+          },
+        },
+        filetypes = { "typescriptreact", "typescript", "javascriptreact", "javascript", "vue" },
       })
-      vim.lsp.enable("vue_ls")
-      -- vim.lsp.config("ts_ls", {
-      --   init_options = {
-      --     plugins = {
-      --       {
-      --         name = "@vue/typescript-plugin",
-      --         location = vue_language_server_path,
-      --         languages = { "vue" },
-      --       },
-      --     },
-      --   },
-      --   filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
-      -- })
+      vim.lsp.config("vue_ls", {
+        init_options = {
+          vue = { hybridMode = true },
+        },
+      })
       vim.lsp.enable("ts_ls")
+      vim.lsp.enable("vue_ls")
       vim.lsp.enable("html")
       vim.lsp.enable("cssls")
       vim.lsp.enable("css_modules_ls")
       vim.lsp.enable("css_variables")
       vim.lsp.enable("tailwindcss")
+      -- rust
       vim.lsp.enable("rust_analyzer")
     end,
   },
