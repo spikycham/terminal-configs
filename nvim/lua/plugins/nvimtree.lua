@@ -22,9 +22,11 @@ return {
     keys = {
       { "<leader>f", "<cmd>NvimTreeToggle<CR>", desc = "toggle file tree" },
     },
-    config = function()
-      require("nvim-tree").setup({})
-    end,
+    opts = {
+      view = {
+        side = "right",
+      },
+    },
   },
 
   -- buffer line
