@@ -9,6 +9,15 @@ set -gx PATH $HOME/.local/bin $PATH
 function vim
 	nvim $argv
 end
+# Nvm & Node
+set -x NVM_DIR $HOME/.nvm
+if test -s "$NVM_DIR/nvm.sh"
+    # define a function to run nvm commands via bash
+    function nvm
+        bash -c "source $NVM_DIR/nvm.sh; nvm $argv"
+    end
+end
+set -x PATH $NVM_DIR/versions/node/(nvm current)/bin $PATH
 
 # HTTP / HTTPS Proxy
 set -gx HTTP_PROXY http://127.0.0.1:7890
