@@ -1,6 +1,11 @@
 return {
   "nvimdev/indentmini.nvim",
   config = function()
-    require("indentmini").setup()
+    local opts = {
+      exclude = {
+        "markdown",
+      }
+    }
+    require("indentmini").setup(opts)
   end,
 }
