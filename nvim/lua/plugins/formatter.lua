@@ -12,7 +12,7 @@ return {
           vim.api.nvim_buf_get_name(0),
           "--tab-width",
           -- Modify here to change the indent width
-          "2",
+          "4",
           "--use-tabs",
           "false",
           "--bracket-same-line",
@@ -73,7 +73,7 @@ return {
                 vim.api.nvim_buf_get_name(0),
                 "-",
                 "--indent-width",
-                "2",
+                "4",
                 "--indent-type",
                 "Spaces",
               },
