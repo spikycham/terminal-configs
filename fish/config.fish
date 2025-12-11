@@ -63,7 +63,7 @@ function fish_prompt
     # 当前路径配置
     set full_path (pwd)
     if test $full_path = $HOME
-        set rel_path "/ "
+        set rel_path "~ "
     else
         set rel_path (basename $full_path)" "
     end
