@@ -10,7 +10,8 @@ require("config.lazy")
 -- vim.cmd("colorscheme gruvbox")
 -- vim.cmd("colorscheme nordic")
 -- vim.cmd("colorscheme github_dark_default")
-vim.cmd("colorscheme catppuccin")
+-- vim.cmd("colorscheme catppuccin")
+vim.cmd("colorscheme vscode")
 
 -- Set comment to italic and be default color
 local function mod_hl(group, attrs)
@@ -23,5 +24,5 @@ end
 -- mod_hl("Comment", { italic = true })
 
 -- Indent mini color
-vim.cmd.highlight("IndentLine guifg=#333333")
-vim.cmd.highlight("IndentLineCurrent guifg=#5fafff")
+vim.cmd.highlight("IndentLine guifg=#444444")
+vim.cmd.highlight("IndentLineCurrent guifg=#61d23f")
