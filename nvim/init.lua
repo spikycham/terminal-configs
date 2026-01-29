@@ -2,7 +2,6 @@ require("config.options")
 require("config.lazy")
 
 -- Built-ins
-vim.cmd("colorscheme default")
 -- vim.cmd("colorscheme slate")
 -- vim.cmd("colorscheme habamax")
 -- vim.cmd("colorscheme lunaperche")
@@ -12,7 +11,7 @@ vim.cmd("colorscheme default")
 -- vim.cmd("colorscheme nordic")
 -- vim.cmd("colorscheme github_dark_default")
 -- vim.cmd("colorscheme catppuccin")
--- vim.cmd("colorscheme vscode")
+vim.cmd("colorscheme vscode")
 -- vim.cmd("colorscheme terafox")
 
 -- Set comment to italic and be default color

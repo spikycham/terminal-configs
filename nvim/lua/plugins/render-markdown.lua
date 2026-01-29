@@ -3,11 +3,24 @@ return {
     dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-mini/mini.nvim" },
     opts = {
         heading = {
-            enabled = false, -- do not render the heading
-            signs = { "" },
+            enabled = true,
+            sign = false,
+            position = "inline",
+            backgrounds = {
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+            },
         },
         code = {
             sign = false,
+            width = "block",
+        },
+        bullet = {
+            icons = { "-" },
         },
     },
 }
