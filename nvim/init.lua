@@ -8,6 +8,8 @@ require("config.lazy")
 
 -- Plugins
 -- vim.cmd("colorscheme gruvbox")
+-- vim.cmd("colorscheme kanagawa")
+-- vim.cmd("colorscheme onedark")
 -- vim.cmd("colorscheme nordic")
 -- vim.cmd("colorscheme github_dark_default")
 -- vim.cmd("colorscheme catppuccin")

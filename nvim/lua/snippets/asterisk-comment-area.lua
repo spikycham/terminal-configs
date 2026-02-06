@@ -6,7 +6,7 @@ local t = ls.text_node
 ls.add_snippets("javascript", {
     s("/**", {
         t({
-            "/*",
+            "/**",
             " * ",
         }),
         i(1),
@@ -19,7 +19,7 @@ ls.add_snippets("javascript", {
 ls.add_snippets("typescript", {
     s("/**", {
         t({
-            "/*",
+            "/**",
             " * ",
         }),
         i(1),
@@ -32,7 +32,7 @@ ls.add_snippets("typescript", {
 ls.add_snippets("javascriptreact", {
     s("/**", {
         t({
-            "/*",
+            "/**",
             " * ",
         }),
         i(1),
@@ -45,7 +45,7 @@ ls.add_snippets("javascriptreact", {
 ls.add_snippets("typescriptreact", {
     s("/**", {
         t({
-            "/*",
+            "/**",
             " * ",
         }),
         i(1),
@@ -58,7 +58,7 @@ ls.add_snippets("typescriptreact", {
 ls.add_snippets("vue", {
     s("/**", {
         t({
-            "/*",
+            "/**",
             " * ",
         }),
         i(1),
