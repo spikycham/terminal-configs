@@ -16,10 +16,10 @@ return {
             },
         },
         code = {
+            -- enabled = false,
             sign = false,
-            width = "block",
-            language_icon = false,
-            language_name = false,
+            language_icon = true,
+            language_name = true,
         },
         bullet = {
             icons = { "-" },
