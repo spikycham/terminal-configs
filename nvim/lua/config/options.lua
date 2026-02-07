@@ -22,3 +22,4 @@ vim.cursorline = true
 vim.laststatus = 3
 
 vim.swapfile = false
+vim.linebreak = true

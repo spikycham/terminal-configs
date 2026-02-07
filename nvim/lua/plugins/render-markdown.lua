@@ -27,8 +27,8 @@ return {
 
             border = "thick",
 
-            inline_left = "`",
-            inline_right = "`",
+            -- inline_left = "`",
+            -- inline_right = "`",
         },
         bullet = {
             icons = { "-" },
