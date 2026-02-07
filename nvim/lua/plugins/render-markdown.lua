@@ -17,9 +17,18 @@ return {
         },
         code = {
             -- enabled = false,
+
             sign = false,
             language_icon = true,
             language_name = true,
+
+            language_pad = 2,
+            left_pad = 2,
+
+            border = "thick",
+
+            inline_left = "`",
+            inline_right = "`",
         },
         bullet = {
             icons = { "-" },
