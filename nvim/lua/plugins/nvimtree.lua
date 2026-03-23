@@ -34,6 +34,12 @@ return {
                             arrow_open = "-",
                         },
                     },
+                    -- web_devicons = {
+                    --     file = {
+                    --         enable = false,
+                    --         color = false,
+                    --     },
+                    -- },
                 },
             },
         },

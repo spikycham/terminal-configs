@@ -1,4 +1,6 @@
 return {
     "Mofiqul/vscode.nvim",
-    opts = {},
+    opts = {
+        transparent = true,
+    },
 }

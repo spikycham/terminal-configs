@@ -3,7 +3,7 @@ return {
     dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-mini/mini.nvim" },
     opts = {
         heading = {
-            enabled = true,
+            enabled = false,
             sign = false,
             position = "inline",
             backgrounds = {
@@ -26,9 +26,6 @@ return {
             left_pad = 2,
 
             border = "thick",
-
-            -- inline_left = "`",
-            -- inline_right = "`",
         },
         bullet = {
             icons = { "-" },
@@ -45,7 +42,7 @@ return {
                 -- ⇒
                 -- ⮕
                 -- ➔
-                todo = { raw = "[-]", rendered = "[-]", highlight = "RenderMarkdownTodo", scope_highlight = nil },
+                todo = { raw = "[-]", rendered = "[-]", highlight = "RenderMarkdownTodo" },
             },
         },
     },

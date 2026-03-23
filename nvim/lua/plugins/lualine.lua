@@ -5,10 +5,9 @@ return {
         require("lualine").setup({
             options = {
                 -- theme = "16color",
-                -- theme = "onedark",
+                theme = "onedark",
                 -- theme = "gruvbox",
                 -- theme = "OceanicNext", -- for nordic
-                theme = "vscode",
                 component_separators = { left = "|", right = "|" },
                 section_separators = { left = "", right = "" },
             },

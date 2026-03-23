@@ -1,5 +1,6 @@
 require("config.options")
 require("config.lazy")
+require("config.theme")
 
 -- Built-ins
 -- vim.cmd("colorscheme slate")
@@ -11,10 +12,11 @@ require("config.lazy")
 -- vim.cmd("colorscheme kanagawa")
 -- vim.cmd("colorscheme onedark")
 -- vim.cmd("colorscheme nordic")
--- vim.cmd("colorscheme github_dark_default")
+-- vim.cmd("colorscheme github_dark")
 -- vim.cmd("colorscheme catppuccin")
-vim.cmd("colorscheme vscode")
+-- vim.cmd("colorscheme vscode")
 -- vim.cmd("colorscheme terafox")
+-- vim.cmd("colorscheme monokai-pro")
 
 -- Set comment to italic and be default color
 local function mod_hl(group, attrs)
@@ -26,6 +28,6 @@ local function mod_hl(group, attrs)
 end
 mod_hl("Comment", { italic = true })
 
--- Indent mini color
+-- Indent mini color.
 vim.cmd.highlight("IndentLine guifg=#444444")
-vim.cmd.highlight("IndentLineCurrent guifg=#61d23f")
+vim.cmd.highlight("IndentLineCurrent guifg=#3659a6")
