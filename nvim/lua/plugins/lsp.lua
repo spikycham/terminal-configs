@@ -43,6 +43,7 @@ return {
                 -- "stylua",
                 -- "vtsls",
                 "pyright",
+                -- "black",
             },
         },
     },
