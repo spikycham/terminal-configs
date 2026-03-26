@@ -15,6 +15,9 @@ return {
                 "",
             },
         },
+        -- link = {
+        --     enabled = false,
+        -- },
         code = {
             -- enabled = false,
 

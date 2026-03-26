@@ -42,6 +42,7 @@ return {
                 -- "prettierd",
                 -- "stylua",
                 -- "vtsls",
+                "pyright",
             },
         },
     },
@@ -83,6 +84,7 @@ return {
             vim.lsp.enable("tailwindcss")
             -- rust
             vim.lsp.enable("rust_analyzer")
+            vim.lsp.enable("pyright")
         end,
     },
 
