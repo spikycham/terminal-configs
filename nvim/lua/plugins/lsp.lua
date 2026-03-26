@@ -84,6 +84,13 @@ return {
             vim.lsp.enable("tailwindcss")
             -- rust
             vim.lsp.enable("rust_analyzer")
+            vim.lsp.config("pyright", {
+                settings = {
+                    python = {
+                        pythonPath = ".venv/bin/python",
+                    },
+                },
+            })
             vim.lsp.enable("pyright")
         end,
     },
