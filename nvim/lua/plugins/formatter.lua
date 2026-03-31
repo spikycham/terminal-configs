@@ -45,6 +45,7 @@ return {
 
         formatter.setup({
             filetype = {
+                -- Front packages
                 javascript = { prettier },
                 javascriptreact = { prettier },
                 typescript = { prettier },
@@ -52,6 +53,8 @@ return {
                 html = { prettier },
                 css = { prettier },
                 json = { prettier },
+                vue = { prettier_vue },
+
                 python = {
                     function()
                         return {
@@ -61,9 +64,17 @@ return {
                         }
                     end,
                 },
-                -- vue
-                vue = { prettier_vue },
-                -- not for work
+                go = {
+                    function()
+                        return {
+                            exe = "gofumpt",
+                            args = { "-extra" },
+                            stdin = true,
+                        }
+                    end,
+                },
+
+                -- Not for work
                 rust = {
                     function()
                         return {
@@ -105,6 +116,7 @@ return {
                 "*.json",
                 "*.vue",
                 "*.py",
+                "*.go",
                 -- not for work
                 "*.rs",
                 "*.lua",

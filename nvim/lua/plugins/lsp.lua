@@ -37,13 +37,15 @@ return {
                 "tailwindcss",
                 "ts_ls",
                 "vue_ls",
+                "pyright",
+                "gopls",
                 -- Not support to ensure installed
                 -- "prettier",
                 -- "prettierd",
                 -- "stylua",
                 -- "vtsls",
-                "pyright",
                 -- "black",
+                -- "gofumpt",
             },
         },
     },
@@ -93,6 +95,7 @@ return {
                 },
             })
             vim.lsp.enable("pyright")
+            vim.lsp.enable("gopls")
         end,
     },
 
