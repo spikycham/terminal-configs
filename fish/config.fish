@@ -1,4 +1,5 @@
 if status is-interactive
+
 # Environment paths
 # Cargo for rust
 set -gx PATH $HOME/.cargo/bin $PATH
@@ -40,22 +41,11 @@ end
 function fish_prompt
     # 自定义用户名和主机名
     set my_user "cham"
-    set my_host "Mac"
 
-    # 完整路径配置
-    # echo -n "@"$my_host" "
-    # set full_path (pwd)
-    # set home_dir $HOME
-    # set rel_path (string replace -r "^$home_dir" "" $full_path)
-    # if test "$rel_path" = ""
-    #     set rel_path "~"
-    # end
-    # echo -n "@"$my_host":"
-    # echo -n "\$ "
     # 当前路径配置
     set full_path (pwd)
     if test $full_path = $HOME
-        set rel_path "/ "
+        set rel_path "/"
     else
         set rel_path (basename $full_path)" "
     end

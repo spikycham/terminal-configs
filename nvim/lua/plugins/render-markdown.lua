@@ -45,7 +45,7 @@ return {
                 -- ⇒
                 -- ⮕
                 -- ➔
-                todo = { raw = "[-]", rendered = "[-]", highlight = "RenderMarkdownTodo" },
+                todo = { raw = "[-]", rendered = "[-]", highlight = "raw" },
             },
         },
     },
