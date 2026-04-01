@@ -46,6 +46,7 @@ return {
                 -- ⮕
                 -- ➔
                 todo = { raw = "[-]", rendered = "[-]", highlight = "raw" },
+                sum = { raw = "[SUMMARY]", rendered = "[SUMMARY]", highlight = "raw" },
             },
         },
     },
