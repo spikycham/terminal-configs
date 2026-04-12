@@ -1,0 +1,12 @@
+theme = Apple System Colors Light
+
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor
+
+shell-integration = fish
+
+macos-icon-frame = chrome
+
+font-family = FiraMono Nerd Font Mono
+font-size = 22
