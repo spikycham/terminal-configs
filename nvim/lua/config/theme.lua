@@ -18,7 +18,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
         vim.api.nvim_set_hl(0, "CursorInsert", { bg = "#000000", fg = "#000000" })
 
         -- UI
-        vim.api.nvim_set_hl(0, "Normal", { fg = "#bbbbbb", bg = "NONE" })
-        vim.api.nvim_set_hl(0, "NormalFloat", { fg = "#bbbbbb", bg = "NONE" })
+        -- vim.api.nvim_set_hl(0, "Normal", { fg = "#bbbbbb", bg = "NONE" })
+        -- vim.api.nvim_set_hl(0, "NormalFloat", { fg = "#bbbbbb", bg = "NONE" })
     end,
 })
