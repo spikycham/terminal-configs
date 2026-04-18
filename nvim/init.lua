@@ -27,7 +27,7 @@ vim.cmd("colorscheme quiet")
 --         vim.api.nvim_set_hl(0, group, new_hl)
 --     end
 -- end
--- mod_hl("Comment", { italic = true })
+-- mod_hl("Comment", { italic = true, bold = false })
 
 -- Indent mini color.
 vim.cmd.highlight("IndentLine guifg=#aaaaaa")

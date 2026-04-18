@@ -1,4 +1,4 @@
-theme = Apple System Colors Light
+# theme = Apple System Colors Light
 
 cursor-style = block
 cursor-style-blink = false
@@ -8,5 +8,12 @@ shell-integration = fish
 
 macos-icon-frame = chrome
 
-font-family = FiraMono Nerd Font Mono
-font-size = 22
+# font-family = FiraMono Nerd Font Mono
+font-family = UbuntuMono Nerd Font Mono
+font-size = 16
+
+window-width = 80
+window-height = 25
+window-save-state = always
+
+quit-after-last-window-closed = true

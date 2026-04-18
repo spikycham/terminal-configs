@@ -1,6 +1,12 @@
 local string_green = "#3cb371"
 local function_blue = "#4169e1"
-local key_red = "#8a2be2"
+-- local key_purple = "#8a2be2"
+-- local key_purple = "#9370db"
+-- local key_purple = "#7b68ee"
+local key_purple = "#daa520"
+-- local key_purple = "#f4a460"
+-- local key_purple = "#cd5c5c"
+-- local key_purple = "#db7093"
 
 vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = "*",
@@ -10,8 +16,8 @@ vim.api.nvim_create_autocmd("ColorScheme", {
         vim.api.nvim_set_hl(0, "String", { fg = string_green })
         vim.api.nvim_set_hl(0, "Function", { fg = function_blue })
 
-        vim.api.nvim_set_hl(0, "Keyword", { fg = key_red })
-        vim.api.nvim_set_hl(0, "PreProc", { fg = key_red })
+        vim.api.nvim_set_hl(0, "Keyword", { fg = key_purple })
+        vim.api.nvim_set_hl(0, "PreProc", { fg = key_purple })
 
         -- Cursor
         vim.opt.guicursor = "n-v-c:block,i:ver25-CursorInsert"
