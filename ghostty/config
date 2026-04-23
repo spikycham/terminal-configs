@@ -1,16 +1,21 @@
 # theme = Apple System Colors Light
+# theme = Atom One Light
 
 cursor-style = block
 cursor-style-blink = false
+cursor-style-blink = true
 shell-integration-features = no-cursor
 
 shell-integration = fish
 
 macos-icon-frame = chrome
 
+font-family = AnonymicePro Nerd Font Mono
 # font-family = FiraMono Nerd Font Mono
-font-family = UbuntuMono Nerd Font Mono
-font-size = 16
+# font-family = JetbrainsMono Nerd Font Mono
+# font-family = UbuntuMono Nerd Font Mono
+# font-size = 16
+font-size = 24
 
 window-width = 80
 window-height = 25

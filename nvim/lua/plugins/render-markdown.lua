@@ -49,5 +49,8 @@ return {
                 sum = { raw = "[SUMMARY]", rendered = "[SUMMARY]", highlight = "raw" },
             },
         },
+        pipe_table = {
+            enabled = false,
+        },
     },
 }

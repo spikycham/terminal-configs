@@ -30,5 +30,12 @@ vim.cmd("colorscheme quiet")
 -- mod_hl("Comment", { italic = true, bold = false })
 
 -- Indent mini color.
-vim.cmd.highlight("IndentLine guifg=#aaaaaa")
-vim.cmd.highlight("IndentLineCurrent guifg=#4169e1")
+-- vim.cmd.highlight("IndentLine guifg=#aaaaaa")
+-- vim.cmd.highlight("IndentLineCurrent guifg=#4169e1")
+
+-- Cursor blink.
+vim.o.guicursor = table.concat({
+    "n-v-c:block-Cursor",
+    "i-ci:block-Cursor/lCursor-blinkwait1000-blinkon100-blinkoff100",
+    "r:hor50-Cursor/lCursor-blinkwait100-blinkon100-blinkoff100",
+}, ",")
