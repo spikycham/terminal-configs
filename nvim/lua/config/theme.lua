@@ -25,10 +25,6 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     end,
 })
 
--- Indent mini color.
-vim.cmd.highlight("IndentLine guifg=#aaaaaa")
-vim.cmd.highlight("IndentLineCurrent guifg=#4169e1")
-
 -- local key_purple = "#8a2be2"
 -- local key_purple = "#9370db"
 -- local key_purple = "#7b68ee"
