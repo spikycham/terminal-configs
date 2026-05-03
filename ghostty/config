@@ -1,3 +1,15 @@
+# Not that good?
+# font-family = AnonymicePro Nerd Font Mono
+# font-family = GoMono Nerd Font Mono
+font-family = FiraMono Nerd Font Mono
+
+# font-family = JetbrainsMono Nerd Font Mono
+font-size = 16
+
+# font-family = UbuntuMono Nerd Font Mono
+# font-size = 28
+
+theme = Abernathy
 # theme = Apple System Colors Light
 # theme = Atom One Light
 
@@ -8,13 +20,6 @@ shell-integration-features = no-cursor
 shell-integration = fish
 
 macos-icon-frame = chrome
-
-font-family = AnonymicePro Nerd Font Mono
-# font-family = FiraMono Nerd Font Mono
-# font-family = JetbrainsMono Nerd Font Mono
-# font-family = UbuntuMono Nerd Font Mono
-# font-size = 16
-font-size = 24
 
 window-width = 80
 window-height = 25
