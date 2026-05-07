@@ -2,7 +2,7 @@ local str_color = "#3cb371"
 local func_color = "#4169e1"
 local key_color = "#ec9550"
 local comment_color = "#81868b"
-local paren_color = "#bc271a"
+-- local paren_color = "#bc271a"
 local text_color = "#c5c7c5"
 local bg_color = "#1e1f20"
 
@@ -26,11 +26,11 @@ vim.api.nvim_create_autocmd("ColorScheme", {
         vim.api.nvim_set_hl(0, "NormalFloat", { fg = text_color, bg = bg_color })
 
         -- Match paren
-        vim.api.nvim_set_hl(0, "MatchParen", {
-            fg = text_color,
-            bg = paren_color,
-            bold = true,
-        })
+        -- vim.api.nvim_set_hl(0, "MatchParen", {
+        --     fg = text_color,
+        --     bg = paren_color,
+        --     bold = true,
+        -- })
     end,
 })
 
