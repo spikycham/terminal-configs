@@ -70,3 +70,9 @@ end
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+
+# Auto open tmux
+if not set -q TMUX
+    exec tmux new-session -A -s main
+end
+
