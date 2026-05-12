@@ -1,15 +1,25 @@
 if status is-interactive
 
 # Environment paths
-# Cargo for rust
-set -gx PATH $HOME/.cargo/bin $PATH
+
 # Homebrew
 set -gx PATH /opt/homebrew/bin $PATH
+
 # Neovim
 set -gx PATH $HOME/.local/bin $PATH
 function vim
 	nvim $argv
 end
+
+# Bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
+
+# Go protoc
+set -gx PATH $PATH /Users/cham/go/bin
+
+# Cargo for rust
+set -gx PATH $HOME/.cargo/bin $PATH
 
 # HTTP / HTTPS Proxy
 set -gx HTTP_PROXY http://127.0.0.1:7890
@@ -45,11 +55,12 @@ function fish_prompt
     # 当前路径配置
     set full_path (pwd)
     if test $full_path = $HOME
-        set rel_path "/"
+        set rel_path "~"
     else
         set rel_path (basename $full_path)" "
     end
 
+    set_color blue
     echo -n $my_user
     set_color normal
     echo -n "@"
@@ -66,10 +77,6 @@ end
 bind \t accept-autosuggestion
 
 end
-
-# bun
-set --export BUN_INSTALL "$HOME/.bun"
-set --export PATH $BUN_INSTALL/bin $PATH
 
 # Auto open tmux
 if not set -q TMUX

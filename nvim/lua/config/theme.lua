@@ -1,10 +1,16 @@
 local str_color = "#3cb371"
-local func_color = "#4169e1"
-local key_color = "#ec9550"
+-- local func_color = "#3465ed"
+-- local key_color = "#ec9550"
 local comment_color = "#81868b"
--- local paren_color = "#bc271a"
-local text_color = "#c5c7c5"
+local fg_color = "#c5c7c5"
 local bg_color = "#1e1f20"
+local key_color = "#3465ed"
+local func_color = bg_color
+
+local bg_color = "#1e2021"
+
+-- local str_color = "#b9bb47"
+local diag_color = "#ff0000"
 
 vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = "*",
@@ -17,26 +23,28 @@ vim.api.nvim_create_autocmd("ColorScheme", {
         vim.api.nvim_set_hl(0, "Keyword", { fg = key_color })
         vim.api.nvim_set_hl(0, "PreProc", { fg = key_color })
 
+        local fg_diag_color = "#ffffff"
+        vim.api.nvim_set_hl(0, "DiagnosticUnderlineError", { fg = fg_diag_color, bg = diag_color })
+        vim.api.nvim_set_hl(0, "DiagnosticError", { fg = fg_diag_color, bg = diag_color })
+
         -- Cursor
-        -- vim.api.nvim_set_hl(0, "CursorInsert", { bg = "#000000", fg = "#000000" })
-        vim.api.nvim_set_hl(0, "CursorInsert", { bg = "#ffffff", fg = "#ffffff" })
+        vim.api.nvim_set_hl(0, "CursorInsert", { bg = "#000000", fg = "#000000" })
+        -- vim.api.nvim_set_hl(0, "CursorInsert", { bg = "#ffffff", fg = "#ffffff" })
 
         -- UI
-        vim.api.nvim_set_hl(0, "Normal", { fg = text_color, bg = bg_color })
-        vim.api.nvim_set_hl(0, "NormalFloat", { fg = text_color, bg = bg_color })
+        -- vim.api.nvim_set_hl(0, "Normal", { fg = fg_color, bg = bg_color })
+        -- vim.api.nvim_set_hl(0, "NormalFloat", { fg = fg_color, bg = bg_color })
+        -- Light
+        vim.api.nvim_set_hl(0, "Normal", { fg = bg_color, bg = "#ffffff" })
 
         -- Match paren
+        -- local paren_color = "#bc271a"
         -- vim.api.nvim_set_hl(0, "MatchParen", {
-        --     fg = text_color,
+        --     fg = fg_color,
         --     bg = paren_color,
         --     bold = true,
         -- })
+        vim.cmd.highlight("IndentLine guifg=#aaaaaa")
+        vim.cmd.highlight("IndentLineCurrent guifg=" .. key_color)
     end,
 })
-
--- local key_color = "#8a2be2"
--- local key_color = "#9370db"
--- local key_color = "#7b68ee"
--- local key_color = "#f4a460"
--- local key_color = "#cd5c5c"
--- local key_color = "#db7093"

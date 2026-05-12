@@ -1,7 +1,9 @@
 # Not that good?
 # font-family = AnonymicePro Nerd Font Mono
 # font-family = GoMono Nerd Font Mono
-font-family = FiraMono Nerd Font Mono
+# font-family = FiraMono Nerd Font Mono
+font-family = CaskaydiaMono Nerd Font
+# font-family = Consolas Nerd Font
 
 # font-family = JetbrainsMono Nerd Font Mono
 font-size = 16
@@ -9,9 +11,13 @@ font-size = 16
 # font-family = UbuntuMono Nerd Font Mono
 # font-size = 28
 
-theme = Abernathy
-# theme = Apple System Colors Light
+# theme = Abernathy
+# foreground = "#e8dcb7"
+# cursor-color = "#e8dcb7"
+
+theme = Apple System Colors Light
 # theme = Atom One Light
+cursor-color = "#000000"
 
 cursor-style = block
 cursor-style-blink = false
@@ -26,3 +32,5 @@ window-height = 25
 window-save-state = always
 
 quit-after-last-window-closed = true
+
+command = /opt/homebrew/bin/fish
