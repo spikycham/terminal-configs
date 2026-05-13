@@ -2,8 +2,8 @@
 # font-family = AnonymicePro Nerd Font Mono
 # font-family = GoMono Nerd Font Mono
 # font-family = FiraMono Nerd Font Mono
-font-family = CaskaydiaMono Nerd Font
-# font-family = Consolas Nerd Font
+# font-family = CaskaydiaMono Nerd Font
+font-family = Consolas Nerd Font
 
 # font-family = JetbrainsMono Nerd Font Mono
 font-size = 16
@@ -11,13 +11,13 @@ font-size = 16
 # font-family = UbuntuMono Nerd Font Mono
 # font-size = 28
 
-# theme = Abernathy
-# foreground = "#e8dcb7"
-# cursor-color = "#e8dcb7"
+theme = Abernathy
+foreground = "#e8dcb7"
+cursor-color = "#e8dcb7"
 
-theme = Apple System Colors Light
+# theme = Apple System Colors Light
 # theme = Atom One Light
-cursor-color = "#000000"
+# cursor-color = "#000000"
 
 cursor-style = block
 cursor-style-blink = false

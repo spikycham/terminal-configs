@@ -57,7 +57,8 @@ function fish_prompt
     if test $full_path = $HOME
         set rel_path "~"
     else
-        set rel_path (basename $full_path)" "
+        # set rel_path (basename $full_path)"/"
+        set rel_path (basename $full_path)
     end
 
     set_color blue
@@ -70,7 +71,8 @@ function fish_prompt
     echo -n (git_status_prompt)
 
     set_color normal
-    echo -n "\$ "
+    # echo -n "\$ "
+    echo -n ": "
 end
 
 # Tab to accept gray completion suggestion
