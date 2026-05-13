@@ -73,6 +73,18 @@ return {
                         }
                     end,
                 },
+                proto = {
+                    function()
+                        return {
+                            exe = "buf",
+                            args = {
+                                "format",
+                                "-w",
+                            },
+                            stdin = false,
+                        }
+                    end,
+                },
 
                 -- Not for work
                 rust = {
@@ -117,6 +129,7 @@ return {
                 "*.vue",
                 "*.py",
                 "*.go",
+                "*.proto",
                 -- not for work
                 "*.rs",
                 "*.lua",

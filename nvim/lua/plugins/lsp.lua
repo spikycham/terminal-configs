@@ -39,6 +39,7 @@ return {
                 "vue_ls",
                 "pyright",
                 "gopls",
+                "buf_ls",
                 -- Not support to ensure installed
                 -- "prettier",
                 -- "prettierd",
@@ -96,6 +97,7 @@ return {
             })
             vim.lsp.enable("pyright")
             vim.lsp.enable("gopls")
+            vim.lsp.enable("buf_ls")
         end,
     },
 

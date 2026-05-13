@@ -17,6 +17,7 @@ return {
                 "markdown_inline",
                 "lua",
                 "rust",
+                "proto",
             },
             highlight = {
                 enable = true,
