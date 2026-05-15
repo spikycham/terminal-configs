@@ -50,29 +50,29 @@ function git_status_prompt
 end
 function fish_prompt
     # 自定义用户名和主机名
-    set my_user "cham"
+    # set my_user "devcham"
+    set my_user "spickycham"
 
     # 当前路径配置
     set full_path (pwd)
     if test $full_path = $HOME
-        set rel_path "~"
+        set rel_path "[~]"
     else
         # set rel_path (basename $full_path)"/"
-        set rel_path (basename $full_path)
+        set rel_path "["(basename $full_path)"]"
     end
 
     set_color blue
     echo -n $my_user
     set_color normal
-    echo -n "@"
+    echo -n ""
     echo -n $rel_path
 
     set_color green
     echo -n (git_status_prompt)
 
     set_color normal
-    # echo -n "\$ "
-    echo -n ": "
+    echo -n "\$ "
 end
 
 # Tab to accept gray completion suggestion
@@ -85,3 +85,10 @@ if not set -q TMUX
     exec tmux new-session -A -s main
 end
 
+
+# pnpm
+set -gx PNPM_HOME "/Users/cham/Library/pnpm"
+if not string match -q -- "$PNPM_HOME/bin" $PATH
+  set -gx PATH "$PNPM_HOME/bin" $PATH
+end
+# pnpm end
