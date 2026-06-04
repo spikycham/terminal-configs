@@ -58,14 +58,8 @@ return {
 
             vim.lsp.enable("lua_ls")
             vim.lsp.enable("jsonls")
-            local vue_language_server_path = vim.fn.stdpath("data")
-                .. "/mason/packages/vue-language-server/node_modules/@vue/language-server"
-            local vue_plugin = {
-                name = "@vue/typescript-plugin",
-                location = vue_language_server_path,
-                languages = { "vue" },
-                configNamespace = "typescript",
-            }
+
+            -- Typescript config.
             vim.lsp.config("ts_ls", {
                 init_options = {
                     plugins = {
@@ -74,20 +68,32 @@ return {
                 },
                 filetypes = { "typescriptreact", "typescript", "javascriptreact", "javascript", "vue" },
             })
+            vim.lsp.enable("ts_ls")
+
+            -- Vue config.
+            local vue_language_server_path = vim.fn.stdpath("data")
+                .. "/mason/packages/vue-language-server/node_modules/@vue/language-server"
+            local vue_plugin = {
+                name = "@vue/typescript-plugin",
+                location = vue_language_server_path,
+                languages = { "vue" },
+                configNamespace = "typescript",
+            }
             vim.lsp.config("vue_ls", {
                 init_options = {
                     vue = { hybridMode = true },
                 },
             })
-            vim.lsp.enable("ts_ls")
             vim.lsp.enable("vue_ls")
+
             vim.lsp.enable("html")
             vim.lsp.enable("cssls")
             vim.lsp.enable("css_modules_ls")
             vim.lsp.enable("css_variables")
             vim.lsp.enable("tailwindcss")
-            -- rust
             vim.lsp.enable("rust_analyzer")
+
+            -- Python config.
             vim.lsp.config("pyright", {
                 settings = {
                     python = {
@@ -96,6 +102,7 @@ return {
                 },
             })
             vim.lsp.enable("pyright")
+
             vim.lsp.enable("gopls")
             vim.lsp.enable("buf_ls")
         end,

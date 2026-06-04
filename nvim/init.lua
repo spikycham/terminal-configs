@@ -1,7 +1,13 @@
 require("config.options")
 require("config.lazy")
--- require("config.theme-light")
-require("config.theme-dark")
+-- require("config.theme-dark-gruvbox")
+-- require("config.theme-dark-github")
+-- require("config.theme-dark-onedark")
+-- require("config.theme-dark-aurora")
+-- require("config.theme-dark-xcode")
+require("config.theme-dark-codesandbox")
+-- require("config.theme-light-aurora")
+
 
 -- Built-ins
 -- vim.cmd("colorscheme slate")
@@ -31,8 +37,8 @@ vim.cmd("colorscheme quiet")
 -- mod_hl("Comment", { italic = true, bold = false })
 
 -- Indent mini color.
-vim.cmd.highlight("IndentLine guifg=#aaaaaa")
-vim.cmd.highlight("IndentLineCurrent guifg=#4169e1")
+-- vim.cmd.highlight("IndentLine guifg=#aaaaaa")
+-- vim.cmd.highlight("IndentLineCurrent guifg=#4169e1")
 
 -- Cursor blink.
 vim.o.guicursor = table.concat({

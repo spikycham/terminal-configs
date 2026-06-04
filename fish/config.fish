@@ -51,21 +51,22 @@ end
 function fish_prompt
     # 自定义用户名和主机名
     # set my_user "devcham"
-    set my_user "spickycham"
+    set my_user "spikycham"
 
     # 当前路径配置
     set full_path (pwd)
     if test $full_path = $HOME
-        set rel_path "[~]"
+        set rel_path "~"
+        # set rel_path "[~]"
     else
-        # set rel_path (basename $full_path)"/"
-        set rel_path "["(basename $full_path)"]"
+        set rel_path (basename $full_path)"/"
+        # set rel_path "["(basename $full_path)"]"
     end
 
     set_color blue
     echo -n $my_user
     set_color normal
-    echo -n ""
+    echo -n "@"
     echo -n $rel_path
 
     set_color green
