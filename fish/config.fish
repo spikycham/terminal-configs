@@ -63,7 +63,8 @@ function fish_prompt
         # set rel_path "["(basename $full_path)"]"
     end
 
-    set_color blue
+    # set_color "#d6f778"
+    set_color "#a091f8"
     echo -n $my_user
     set_color normal
     echo -n "@"

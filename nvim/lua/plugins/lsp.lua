@@ -59,7 +59,7 @@ return {
             vim.lsp.enable("lua_ls")
             vim.lsp.enable("jsonls")
 
-            -- Typescript config.
+            -- Typescript configs.
             vim.lsp.config("ts_ls", {
                 init_options = {
                     plugins = {
@@ -70,7 +70,7 @@ return {
             })
             vim.lsp.enable("ts_ls")
 
-            -- Vue config.
+            -- Vue configs.
             local vue_language_server_path = vim.fn.stdpath("data")
                 .. "/mason/packages/vue-language-server/node_modules/@vue/language-server"
             local vue_plugin = {
@@ -91,9 +91,11 @@ return {
             vim.lsp.enable("css_modules_ls")
             vim.lsp.enable("css_variables")
             vim.lsp.enable("tailwindcss")
+
+            -- Rust configs.
             vim.lsp.enable("rust_analyzer")
 
-            -- Python config.
+            -- Python configs.
             vim.lsp.config("pyright", {
                 settings = {
                     python = {
@@ -102,6 +104,35 @@ return {
                 },
             })
             vim.lsp.enable("pyright")
+
+            -- Swift configs.
+            vim.lsp.config("sourcekit", {
+                cmd = { "sourcekit-lsp" },
+                filetypes = { "swift" },
+                root_markers = {
+                    ".git",
+                    "compile_commands.json",
+                    ".sourcekit-lsp",
+                    "Package.swift",
+                },
+                get_language_id = function(_, ftype)
+                    return ftype
+                end,
+                capabilities = {
+                    workspace = {
+                        didChangeWatchedFiles = {
+                            dynamicRegistration = true,
+                        },
+                    },
+                    textDocument = {
+                        diagnostic = {
+                            dynamicRegistration = true,
+                            relatedDocumentSupport = true,
+                        },
+                    },
+                },
+            })
+            vim.lsp.enable("sourcekit")
 
             vim.lsp.enable("gopls")
             vim.lsp.enable("buf_ls")

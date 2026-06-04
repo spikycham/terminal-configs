@@ -1,6 +1,6 @@
 local fg_color = "#f0f0f0"
--- local bg_color = "#1a1a1a"
-local bg_color = "#0d0d0d"
+local bg_color = "#1a1a1a"
+-- local bg_color = "#0d0d0d"
 
 vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = "*",
