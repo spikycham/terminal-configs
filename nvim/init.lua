@@ -4,10 +4,9 @@ require("config.lazy")
 -- require("config.theme-dark-github")
 -- require("config.theme-dark-onedark")
 -- require("config.theme-dark-aurora")
--- require("config.theme-dark-xcode")
-require("config.theme-dark-codesandbox")
+require("config.theme-dark-xcode")
+-- require("config.theme-dark-codesandbox")
 -- require("config.theme-light-aurora")
-
 
 -- Built-ins
 -- vim.cmd("colorscheme slate")

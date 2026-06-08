@@ -5,10 +5,10 @@
 # font-family = CaskaydiaMono Nerd Font
 font-family = Consolas Nerd Font
 # font-family = OperatorMono Nerd Font
-# font-size = 20
+font-size = 17
 
 # font-family = JetbrainsMono Nerd Font Mono
-font-size = 16
+# font-size = 16
 # font-family = UbuntuMono Nerd Font Mono
 # font-size = 28
 
@@ -21,6 +21,8 @@ theme = Abernathy
 # theme = Apple System Colors Light
 # theme = Atom One Light
 # cursor-color = "#000000"
+
+adjust-cell-height = 40%
 
 cursor-style = block
 cursor-style-blink = false

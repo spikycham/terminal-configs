@@ -44,6 +44,9 @@ vim.api.nvim_create_autocmd("ColorScheme", {
         vim.api.nvim_set_hl(0, "DiagnosticUnderlineError", { fg = fg_diag_color, bg = diag_color })
         vim.api.nvim_set_hl(0, "DiagnosticError", { fg = fg_diag_color, bg = diag_color })
 
+        -- Visual selected lines color.
+        vim.api.nvim_set_hl(0, "Visual", { fg = bg_color, bg = str_color })
+
         -- Cursor
         vim.api.nvim_set_hl(0, "CursorLine", { bg = "#363747" })
 
