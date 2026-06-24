@@ -2,6 +2,10 @@ if status is-interactive
 
 # Environment paths
 
+# [personal cli project] todo
+set -Ux fish_user_paths $fish_user_paths ~/.local/bin # test
+set -Ux fish_user_paths $fish_user_paths ~/.cargo/bin/ # main
+
 # Homebrew
 set -gx PATH /opt/homebrew/bin $PATH
 
@@ -63,8 +67,8 @@ function fish_prompt
         # set rel_path "["(basename $full_path)"]"
     end
 
-    # set_color "#d6f778"
-    set_color "#a091f8"
+    # set_color "#a091f8"
+    set_color blue
     echo -n $my_user
     set_color normal
     echo -n "@"

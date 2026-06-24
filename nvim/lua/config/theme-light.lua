@@ -51,7 +51,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 
         -- Cursor
         vim.api.nvim_set_hl(0, "CursorInsert", { bg = fg_color, fg = fg_color })
-        vim.api.nvim_set_hl(0, "CursorLine", { bg = "#e2e2e2" })
+        vim.api.nvim_set_hl(0, "CursorLine", { bg = "silver" })
 
         -- UI
         vim.api.nvim_set_hl(0, "Normal", { fg = fg_color, bg = bg_color })

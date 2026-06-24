@@ -2,27 +2,28 @@
 # font-family = AnonymicePro Nerd Font Mono
 # font-family = GoMono Nerd Font Mono
 # font-family = FiraMono Nerd Font Mono
-# font-family = CaskaydiaMono Nerd Font
+font-family = CaskaydiaMono Nerd Font
 # font-family = Consolas Nerd Font
-font-family = OperatorMono Nerd Font
+# font-family = OperatorMono Nerd Font
 font-size = 17
 
 # font-family = JetbrainsMono Nerd Font Mono
 # font-size = 16
 # font-family = UbuntuMono Nerd Font Mono
-# font-size = 28
+# font-size = 24
 
-theme = Abernathy
+# theme = Abernathy
 # foreground = "#acb2bf"
 # cursor-color = "#acb2bf"
 # foreground = "#e8dcb7"
 # cursor-color = "#e8dcb7"
 
 # theme = Apple System Colors Light
+theme = Builtin Light
 # theme = Atom One Light
 # cursor-color = "#000000"
 
-adjust-cell-height = 40%
+adjust-cell-height = 20%
 
 cursor-style = block
 cursor-style-blink = false
