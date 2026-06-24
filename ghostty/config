@@ -23,7 +23,7 @@ theme = Builtin Light
 # theme = Atom One Light
 # cursor-color = "#000000"
 
-adjust-cell-height = 20%
+# adjust-cell-height = 40%
 
 cursor-style = block
 cursor-style-blink = false
