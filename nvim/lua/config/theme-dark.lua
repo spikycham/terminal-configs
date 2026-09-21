@@ -26,7 +26,8 @@ vim.api.nvim_create_autocmd("ColorScheme", {
             vim.api.nvim_set_hl(0, group, { fg = fg_color })
         end
 
-        local comment_color = "gray"
+        local comment_color = "#555555"
+        -- local comment_color = "gray"
         vim.api.nvim_set_hl(0, "Comment", { fg = comment_color, italic = false, bold = false })
 
         local str_color = "green"
@@ -36,7 +37,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
         vim.api.nvim_set_hl(0, "Function", { fg = func_color })
         vim.api.nvim_set_hl(0, "@constructor", { fg = func_color })
 
-        local key_color = "purple"
+        local key_color = "teal"
         vim.api.nvim_set_hl(0, "Keyword", { fg = key_color })
         vim.api.nvim_set_hl(0, "PreProc", { fg = key_color })
 

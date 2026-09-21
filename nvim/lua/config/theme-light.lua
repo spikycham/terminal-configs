@@ -37,7 +37,8 @@ vim.api.nvim_create_autocmd("ColorScheme", {
         vim.api.nvim_set_hl(0, "Function", { fg = func_color })
         vim.api.nvim_set_hl(0, "@constructor", { fg = func_color })
 
-        local key_color = "purple"
+        -- local key_color = "blue"
+        local key_color = func_color
         vim.api.nvim_set_hl(0, "Keyword", { fg = key_color })
         vim.api.nvim_set_hl(0, "PreProc", { fg = key_color })
 
