@@ -53,6 +53,7 @@ return {
                 html = { prettier },
                 css = { prettier },
                 json = { prettier },
+                jsonc = { prettier },
                 vue = { prettier_vue },
 
                 python = {
@@ -130,6 +131,7 @@ return {
                 "*.html",
                 "*.css",
                 "*.json",
+                "*.jsonc",
                 "*.vue",
                 "*.py",
                 "*.go",

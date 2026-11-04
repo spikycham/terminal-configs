@@ -41,7 +41,7 @@ return {
                 "gopls",
                 "buf_ls",
 
-                "clangd",
+                -- "clangd",
 
                 -- Not support to ensure installed
                 -- "prettier",
@@ -140,7 +140,7 @@ return {
             vim.lsp.enable("gopls")
             vim.lsp.enable("buf_ls")
 
-            vim.lsp.enable("clangd")
+            -- vim.lsp.enable("clangd")
         end,
     },
 
