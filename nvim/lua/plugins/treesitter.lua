@@ -1,10 +1,10 @@
 return {
-    "nvim-treesitter/nvim-treesitter",
-    build = ":TSUpdate",
-    event = { "BufReadPost", "BufNewFile" },
-    config = function()
-        require("nvim-treesitter.configs").setup({
-            require("nvim-ts-autotag").setup(),
+    {
+        "nvim-treesitter/nvim-treesitter",
+        branch = "main",
+        build = ":TSUpdate",
+        event = { "BufReadPost", "BufNewFile" },
+        opts = {
             ensure_installed = {
                 -- "c",
                 "html",
@@ -25,6 +25,15 @@ return {
             indent = {
                 enable = false,
             },
-        })
-    end,
+        },
+    },
+    {
+        "windwp/nvim-ts-autotag",
+        opts = {
+            opts = {
+                enable_close = true,
+                enable_rename = true,
+            },
+        },
+    },
 }
