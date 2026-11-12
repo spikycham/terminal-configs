@@ -1,12 +1,10 @@
-# font-family = IBM Plex Mono
-# font-size = 16
-# adjust-cell-height = 10%
-# adjust-cell-width = -10%
+font-family = IBM Plex Mono
+font-size = 15
 
-font-family = GeistMono Nerd Font Mono
-font-size = 17
-adjust-cell-height = 5%
-adjust-cell-width = -15%
+# font-family = GeistMono Nerd Font Mono
+# font-size = 17
+# adjust-cell-height = 5%
+# adjust-cell-width = -15%
 
 # font-family = NotoSansM Nerd Font Mono
 # font-size = 16
@@ -34,14 +32,15 @@ adjust-cell-width = -15%
 # font-family = OperatorMono Nerd Font
 # font-size = 20
 
-font-family = JetbrainsMono Nerd Font Mono
+# font-family = JetbrainsMono Nerd Font Mono
 # font-size = 22
 
 # font-family = UbuntuMono Nerd Font Mono
 # font-size = 28
 # font-family = Iosevka Nerd Font Mono
 
-theme = Adwaita
+theme = GitHub Light Default
+# theme = Adwaita
 # theme = Builtin Light
 # theme = Builtin Dark
 # foreground = #bbbbbb
@@ -58,7 +57,7 @@ shell-integration = fish
 macos-icon-frame = chrome
 
 window-width = 210
-window-height = 50
+window-height = 60
 window-save-state = always
 
 quit-after-last-window-closed = true
