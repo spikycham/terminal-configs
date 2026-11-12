@@ -1,33 +1,44 @@
 return {
     "nvim-treesitter/nvim-treesitter",
+    branch = "main",
+    lazy = false,
+    build = ":TSUpdate",
     dependencies = {
         "windwp/nvim-ts-autotag",
     },
-    branch = "master",
-    build = ":TSUpdate",
-    event = { "BufReadPost", "BufNewFile" },
     config = function()
-        require("nvim-treesitter.configs").setup({
-            ensure_installed = {
+        require("nvim-treesitter").install({
+            "c",
+            "html",
+            "css",
+            "javascript",
+            "typescript",
+            "tsx",
+            "json",
+            "markdown",
+            "markdown_inline",
+            "lua",
+            "rust",
+            -- "proto",
+        })
+
+        vim.api.nvim_create_autocmd("FileType", {
+            pattern = {
                 "c",
                 "html",
                 "css",
                 "javascript",
                 "typescript",
-                "tsx",
+                "typescriptreact",
                 "json",
                 "markdown",
-                "markdown_inline",
                 "lua",
                 "rust",
                 -- "proto",
             },
-            highlight = {
-                enable = true,
-            },
-            indent = {
-                enable = true,
-            },
+            callback = function()
+                pcall(vim.treesitter.start)
+            end,
         })
 
         require("nvim-ts-autotag").setup()
