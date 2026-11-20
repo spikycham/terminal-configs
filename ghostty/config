@@ -1,5 +1,5 @@
-font-family = IBM Plex Mono
-font-size = 15
+# font-family = IBM Plex Mono
+# font-size = 15
 
 # font-family = GeistMono Nerd Font Mono
 # font-size = 17
@@ -26,7 +26,10 @@ font-size = 15
 # font-family = Monaco
 # font-size = 20
 
-# font-family = Consolas Nerd Font
+font-family = Consolas Nerd Font
+font-size = 24
+adjust-cell-width = -10%
+
 # font-family = EnvyCodeR Nerd Font Mono
 
 # font-family = OperatorMono Nerd Font
@@ -39,8 +42,9 @@ font-size = 15
 # font-size = 28
 # font-family = Iosevka Nerd Font Mono
 
-theme = GitHub Light Default
+theme = GitHub Dark Default
 # theme = Adwaita
+# theme = Adwaita Dark
 # theme = Builtin Light
 # theme = Builtin Dark
 # foreground = #bbbbbb

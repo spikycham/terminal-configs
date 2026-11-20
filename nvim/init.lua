@@ -1,7 +1,7 @@
 require("config.options")
 require("config.lazy")
 
-require("config.theme-light")
+-- require("config.theme-light")
 -- require("config.theme-dark")
 -- require("config.theme-dark-gruvbox")
 -- require("config.theme-dark-github")
@@ -12,9 +12,9 @@ require("config.theme-light")
 
 -- Built-ins
 -- vim.cmd("colorscheme slate")
--- vim.cmd("colorscheme habamax")
+vim.cmd("colorscheme habamax")
 -- vim.cmd("colorscheme lunaperche")
-vim.cmd("colorscheme quiet")
+-- vim.cmd("colorscheme quiet")
 
 -- Plugins
 -- vim.cmd("colorscheme gruvbox")
