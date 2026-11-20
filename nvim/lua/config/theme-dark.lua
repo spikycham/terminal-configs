@@ -37,7 +37,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
         vim.api.nvim_set_hl(0, "Function", { fg = func_color })
         vim.api.nvim_set_hl(0, "@constructor", { fg = func_color })
 
-        local key_color = "teal"
+        local key_color = "purple"
         vim.api.nvim_set_hl(0, "Keyword", { fg = key_color })
         vim.api.nvim_set_hl(0, "PreProc", { fg = key_color })
 
@@ -58,6 +58,6 @@ vim.api.nvim_create_autocmd("ColorScheme", {
         vim.api.nvim_set_hl(0, "NormalFloat", { fg = fg_color, bg = bg_color })
 
         vim.cmd.highlight("IndentLine guifg=" .. comment_color)
-        vim.cmd.highlight("IndentLineCurrent guifg=" .. func_color)
+        vim.cmd.highlight("IndentLineCurrent guifg=" .. key_color)
     end,
 })
